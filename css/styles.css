@@ -1,0 +1,661 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px 0;
+}
+
+nav>* {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.heading,
+.footer_logo {
+    font-size: 25px;
+    color: white;
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.nav_items a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    float: right;
+    margin-top: 5px;
+}
+
+.description,
+.constant_text {
+    color: white;
+}
+
+.nav_items a::before,
+.nav_items a::after {
+    transform: scaleX(0);
+    transition: transform 250ms ease-in;
+    transform-origin: right;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    position: absolute;
+}
+
+
+.nav_items a:hover::after,
+.nav_items a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.nav_items a::after {
+    border-bottom: 1px solid rgb(14, 118, 255);
+}
+
+.nav_items a::before {
+    border-top: 1px solid rgb(14, 118, 255);
+}
+
+.hero_img {
+    background: url(../images/hero_img.jpg);
+    /* Photo by Victor Freitas: https://www.pexels.com/photo/person-holding-barbell-841130/ */
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.main_section {
+    display: flex;
+}
+
+.main_section_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_section_image img {
+    width: 100%;
+    height: auto;
+}
+
+.main_heading {
+    letter-spacing: 3px;
+    line-height: 80px;
+    font-size: 60px;
+}
+
+.fit {
+    color: rgb(14, 118, 255);
+}
+
+.text_wrapper {
+    width: 80%;
+    color: white;
+    margin: 0 auto;
+}
+
+.banner_caption {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.banner_company_info {
+    width: 40%;
+    margin-top: 20px;
+}
+
+.join_button {
+    padding: 10px 25px;
+    background-color: rgb(14, 118, 255);
+    color: white;
+    border: 2px solid rgb(14, 118, 255);
+    border: none;
+    margin: 20px 0;
+}
+
+.join_button:hover {
+    border: 2px solid rgb(14, 118, 255);
+    color: rgb(14, 118, 255);
+    background-color: white;
+    cursor: pointer;
+    transition: 200ms ease;
+    transform: skewX(1.1);
+}
+
+.profile_section {
+    background: linear-gradient(0deg, rgb(226, 226, 226) 60.22%, rgba(244, 244, 244, 0.1) 85.71%);
+    padding: 0 0 50px 0;
+
+}
+
+.profile_cards,
+.bmi_cards {
+    display: flex;
+}
+
+.profile_cards>div {
+    width: 33.3%;
+}
+
+.main_section,
+.profile_section>*,
+.bmi_section>* {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.main_section_heading,
+.profile_section_heading,
+.bmi_heading {
+    font-size: 24px;
+    color: #3a86ff;
+}
+
+.card {
+    margin-top: 15px;
+}
+
+.main_section_description {
+    font-size: 18px;
+    margin: 15px 0 0 0;
+    width: 60%;
+}
+
+
+
+.card_1 {
+    background-image: url(../images/profile_1.jpg);
+    /* Photo by Jan Kopřiva: https://www.pexels.com/photo/serious-man-in-dark-room-on-black-background-5899204/ */
+}
+
+.card_2 {
+    background-image: url(../images/profile_2.jpg);
+    /* Photo by Rachel Claire: https://www.pexels.com/photo/contemplative-man-with-mustache-in-black-apparel-5490237/ */
+}
+
+.card_3 {
+    background-image: url(../images/profile_3.jpg);
+    /* Photo by Rachel Claire: https://www.pexels.com/photo/contemplative-young-ethnic-man-with-sunlight-on-face-looking-at-camera-in-studio-5490276/ */
+    margin-right: 0;
+}
+
+.main_section_image img {
+    height: 500px;
+    width: 400px;
+}
+
+#slides img {
+    display: none;
+}
+
+.card {
+    color: white;
+    background-size: cover;
+    padding: 12rem 0 0;
+    margin-right: 30px;
+    box-shadow: 0px 0px 10px -5px;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    background-position: center;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: scale(1.05);
+}
+
+.card_content {
+    padding: 1.5em;
+
+}
+
+.card_title {
+    position: relative;
+    width: max-content;
+    margin-bottom: 15px;
+}
+
+.card_title::after {
+    content: "";
+    position: absolute;
+    left: -24px;
+    bottom: -2px;
+    height: 3px;
+    width: 122%;
+}
+
+.title_1::after {
+    background: #3a86ff;
+}
+
+.title_2::after {
+    background: #06d6a0;
+}
+
+.title_3::after {
+    background: #ef233c;
+}
+
+.card_body {
+    margin-bottom: 15px;
+}
+
+#heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #eee;
+
+}
+
+#text {
+    color: #3a86ff;
+    transform: translateY(200px);
+    transition: 1000ms ease-in;
+}
+
+.bmi_calculator {
+    box-shadow: 0px 0px 10px 1px #3a86ff;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.bmi_calculator p {
+    margin-bottom: 10px;
+}
+
+#height,
+#weight {
+    padding: 10px 15px;
+    border-radius: 3px;
+    border: 1px solid lightslategray;
+    margin-bottom: 20px;
+}
+
+#btn {
+    padding: 7px 15px;
+    margin-bottom: 10px;
+    background-color: #3a86ff;
+    border: 1px solid white;
+    color: white;
+}
+
+#btn:hover {
+    background-color: transparent;
+    border: 1px solid #3a86ff;
+    color: #3a86ff;
+    cursor: pointer;
+}
+
+.learn_more {
+    cursor: pointer;
+    display: inline;
+    text-decoration: none;
+    padding: 7px 21px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+}
+
+.learn_more:hover,
+.learn_more:focus {
+    background-color: white;
+    color: black;
+}
+
+.btn_1 {
+    background-color: #3a86ff;
+
+}
+
+.btn_2 {
+    background-color: #06d6a0;
+}
+
+.btn_3 {
+    background-color: #ef233c;
+}
+
+
+
+@media (hover) {
+    .card_content {
+        transform: translateY(75%);
+        transition: transform 500ms ease;
+    }
+
+
+    .card_content>*:not(.card_title) {
+        opacity: 0;
+        transition: opacity 500ms linear;
+    }
+
+    .card:hover .card_content>*:not(.card_title),
+    .card:focus-within .card_content>*:not(.card_title) {
+        opacity: 1;
+        transition-delay: 1000ms;
+    }
+
+    .card:hover .card_content,
+    .card:focus-within .card_content {
+        transform: translateY(0%);
+        transition-delay: 500ms;
+    }
+
+    .card:focus-within .card_content {
+        transition-duration: 0ms;
+    }
+
+    .card_title::after {
+        transform: scaleX(0);
+    }
+}
+
+.card:hover .card_title::after,
+.card:focus-within .card_title::after {
+    transform: scaleX(1);
+    transition: transform 500ms ease;
+    transform-origin: left;
+}
+
+.main_section,
+.profile_section,
+.bmi_section,
+footer {
+    margin-top: 50px;
+}
+
+.bmi_cards {
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.bmi {
+    display: flex;
+    margin-top: 15px;
+    width: 48%;
+    box-shadow: 1px 1px 10px -6px;
+}
+
+.checked {
+    color: yellow;
+}
+
+.bmi_content {
+    width: 60%;
+    padding: 30px 15px;
+}
+
+.testimonial_name,
+.stars {
+    padding-bottom: 10px;
+}
+
+.read_my_story_btn {
+    padding: 10px 15px;
+    border: none;
+    margin: 15px 0;
+    background-color: #3a86ff;
+    border: 2px solid #3a86ff;
+    color: white;
+}
+
+.read_my_story_btn:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: black;
+    transition: 400ms ease;
+
+}
+
+.main_container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main_container>* {
+    width: 50%;
+
+}
+
+.left_register,
+.right_register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_register {
+    background: dodgerblue;
+}
+
+.register_heading a {
+    text-decoration: none;
+}
+
+.register_heading:hover {
+    cursor: pointer;
+}
+
+.brand_name {
+    color: white;
+    font-size: 6em;
+    letter-spacing: 10px;
+}
+
+.right_register {
+    background: #eee;
+}
+
+.register_form {
+    box-shadow: 1px 1px 10px 5px white;
+    border-radius: 10px;
+    width: 50%;
+    background-color: white;
+    padding: 20px 0;
+}
+
+.toggle_btns {
+    display: flex;
+}
+
+.sign_in_btn,
+.sign_up_btn {
+    width: 50%;
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 3px solid dodgerblue;
+}
+
+.sign_in_btn:hover,
+.sign_up_btn:hover {
+    cursor: pointer;
+}
+
+.toggle_btns>div>h1 {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sign_up_form,
+.sign_in_form {
+    padding: 0 20px;
+}
+
+.sign_in_form {
+    display: none;
+}
+
+.sign_in_btn {
+    border-bottom: none;
+}
+
+.sign_up_form>*,
+.sign_in_form>* {
+    padding: 7px 0;
+    margin: 20px 0 0 0;
+    border-radius: 4px;
+}
+
+#fname,
+.email,
+#dob,
+#lname,
+.password {
+    width: 100%;
+    border: 1px solid grey;
+    padding: 10px 7px;
+}
+
+.place::-webkit-input-placeholder {
+    color: red;
+}
+
+.sign_up_form #verify {
+    margin-bottom: 25px;
+}
+
+#dob {
+    margin-top: 10px;
+}
+
+#tnc {
+    display: inline;
+}
+
+.underline_tnc {
+    text-decoration: underline;
+}
+
+.create_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#create_btn,
+#sign_in_btn {
+    text-align: center;
+    border-radius: 16px;
+    background-color: #3a86ff;
+    border: 1px solid white;
+    color: white;
+    padding: 12px 20px;
+}
+
+#create_btn:hover,
+#sign_in_btn:hover {
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #3a86ff;
+    color: #3a86ff;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    padding: 40px 0;
+    align-items: center;
+}
+
+.footer_logo {
+    border-bottom: 1px solid #3a86ff;
+}
+
+.footer_links {
+    margin: 20px 0;
+    display: flex;
+}
+
+.footer_links a {
+    text-decoration: none;
+    margin: 10px 20px;
+    color: white;
+}
+
+.footer_links a:hover {
+    color: #3a86ff;
+    transition: transform 200ms ease;
+}
+
+.social_media_icons:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width:768px) {
+
+    .profile_cards,
+    .bmi_cards,
+    .footer_links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile_cards>div,
+    .bmi {
+        width: 100%;
+    }
+
+    .main_section {
+        flex-direction: column;
+    }
+
+    .main_section img {
+        margin-top: 30px;
+    }
+
+    .card_title {
+        width: unset;
+    }
+
+    .title_1 {
+        color: #3a86ff;
+    }
+
+    .title_2 {
+        color: #06d6a0;
+    }
+
+    .title_3 {
+        color: #ef233c;
+    }
+
+    .card_title::after {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:480px) {
+
+    .believe,
+    .fit {
+        display: block;
+    }
+}
